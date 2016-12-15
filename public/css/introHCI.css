@@ -1,0 +1,111 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+    margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+    /* Colors are in hexadecimal: http://www.colorpicker.com/ */
+    color: #CC00AA;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.jumbotron {
+    position: relative;
+    background: none;
+}
+
+.jumbotron:after {
+    content:"";
+    background: url("../images/lorempixel.jumbotron.jpeg");
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.jumbotron p {
+    color: #6e6e6e;
+    font-size: 15px;
+}
+
+.jumbotron img {
+    padding: 5px;
+    float:left;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.profile img {
+  width: 20%;
+  height: 20%;
+}
+
+.profile div, video, canvas {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#googleMaps {
+    height: 100%;
+}
+
+#map {
+    height: 50%;
+    width: 50%;
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
